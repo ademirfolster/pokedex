@@ -1,0 +1,223 @@
+:root {
+  --background-color-soft: #f0f0f0;
+  --background-color-white: #fff;
+
+  --button-color-red: #e3350d;
+
+  --color-orange: rgb(230, 149, 0);
+  --color-white: #fff;
+  --color-gray: #888;
+
+  --status-color-red: red;
+  --status-color-yellow: yellow;
+  --status-color-green: green;
+
+  --font-main: Arial, Helvetica, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-color-soft);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.buscador {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.buscador input,
+.buscador button {
+  border: 2px solid var(--button-color-red);
+  border-radius: 8px;
+}
+
+#campoBusca {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+#btnBuscar {
+  padding: 10px 20px;
+  background-color: var(--button-color-red);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#btnBuscar:hover {
+  opacity: 0.8;
+}
+
+#cardPokemon {
+  background: var(--background-color-white);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+#sprite {
+  width: 160px;
+  height: 160px;
+  image-rendering: pixelated;
+}
+
+#nome {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 8px 0 4px;
+}
+
+#numero {
+  color: var(--color-gray);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+#tipos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.tipo {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-white);
+  text-transform: capitalize;
+}
+
+.stats {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.stat-linha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.stat-label {
+  width: 80px;
+  color: #555;
+}
+
+.stat-barra-fundo {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-barra-preenchimento {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.stat-valor {
+  width: 28px;
+  text-align: right;
+  font-size: 12px;
+  color: #555;
+}
+
+#btnFavoritar {
+  padding: 10px 24px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+#btnFavoritar:hover {
+  background: #e0e0e0;
+}
+
+#btnFavoritar.favoritado {
+  background: #fff0f0;
+  color: var(--button-color-red);
+}
+
+#erro {
+  color: var(--button-color-red);
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+#tituloFavoritos {
+  margin: 1.5rem 0 1rem;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+#listaFavoritos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.favorito-item {
+  background: var(--background-color-white);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  text-transform: capitalize;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.favorito-item img {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+}
+
+.favorito-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--button-color-red);
+  font-size: 14px;
+  padding: 0 4px;
+}
