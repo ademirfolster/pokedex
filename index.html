@@ -7,6 +7,42 @@
     <title>Pokedéx</title>
   </head>
   <body>
+    <div class="container flex">
+      <h1>Pokedéx</h1>
+
+      <section class="Buscador">
+        <input
+          type="text"
+          name="Buscar"
+          placeholder="Nome ou número do Pokemon"
+          id="campoBusca"
+        />
+        <button id="btnBuscar">Buscar</button>
+      </section>
+
+      <section id="cardPokemon">
+        <img id="sprite" src="" alt="" />
+        <h2 id="nome"></h2>
+        <p id="numero"></p>
+
+        <div id="tipos"></div>
+        <div class="stats">
+          <p>HP: <span id="hp"></span></p>
+          <p>Ataque: <span id="ataque"></span></p>
+          <p>Defesa: <span id="defesa"></span></p>
+          <p>Velocidade: <span id="velocidade"></span></p>
+        </div>
+        <button id="btnFavoritar">Favoritar ♡</button>
+      </section>
+
+      <p id="erro" class="escondido"></p>
+
+      <section class="Favoritos">
+        <h2 id="tituloFavoritos" class="escondido">Favoritos ♡</h2>
+        <div id="listaFavoritos"></div>
+      </section>
+    </div>
+
     <script src="js/scripts.js"></script>
   </body>
 </html>
